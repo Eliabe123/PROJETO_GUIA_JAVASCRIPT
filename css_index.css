@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{ /*Caixa grande*/
+    height: 100vh; /*Para ocupar 100% da tela*/
+    display: flex; /*Para trasnformar numa caixa flexivel*/
+    align-items: center; /*Para alinhar na vertical */
+    justify-content: center; /*Para alinhar na horizontal*/
+    background-color: black;
+}
+
+.conteudo{ /*Caixa pequena*/
+    color:aliceblue;
+    text-align: center; /*Centraliza o texto*/
+}
+
+h1 { /*Caixa pequena*/
+    font-size: 95px;
+}
+
+strong{
+    color:rgb(115, 184, 240)
+}
+
+a{ /*Caixa pequena*/
+    font-size: 20px;
+    text-decoration: none; /*Retira a marcação de baixo da escrita*/
+    color: black;
+    background-color: rgb(115, 184, 240);
+    padding: 12px 32px; /*Espaço tamanho/largura*/
+    border-radius: 8px; /*Arredondamento das bordas*/
+    display: inline-block; /**/
+    animation: animacao 0.7s infinite alternate;
+    margin-right: 20px
+}
+
+@keyframes animacao{
+    0%{
+        transform: scale(1)
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Guiado - Atividade VETOR</title>
+    <link rel="stylesheet" href="css_atividade.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Atividade JavaScript VETOR</h1>
+    </header>
+
+    <main class="conteudo">
+        <h2>Soma e Média de uma Lista</h2>
+        <p>Crie um algoritmo que solicite uma lista de números separados por vírgula em um campo de formulário (ex: 2,4,6). Ao clicar em "Enviar", utilizando um VETOR (array), calcule e exiba a soma e a média dos números informados.</p>
+
+        <form>
+            <br>
+            <textarea name="fonte" cols="80" rows="40">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Estrutura VETOR JavaScript - Atividade exemplo&lt;/title&gt;
+    &lt;style&gt;
+        section{
+            margin-top: 0px auto;
+        }
+
+        .cadlista{
+            width: 300px;
+            margin: 0px auto;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .cadlista input{
+            margin: 5px auto;
+            width: 100%;
+            padding: 5px 0;
+        }
+
+        .cadlista button{
+            width: 30%;
+            margin: 0 10%;
+            background-color: #b1ccf5;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        label{
+            float: left;
+        }
+
+        h2{
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Estrutura VETOR (Array - Atividade exemplo)&lt;/h2&gt;
+
+        &lt;form name="frmlista" action="#" method="get" onsubmit="return validaFormulario()"&gt;
+            &lt;fieldset class="cadlista"&gt;
+                &lt;legend&gt;Entrada de dados&lt;/legend&gt;
+                &lt;br&gt;
+                &lt;label for="lista"&gt;Informe números separados por vírgula&lt;/label&gt;
+                &lt;input type="text" name="txtlista" id="lista"&gt;&lt;br&gt;
+                &lt;br&gt;
+                &lt;button type="reset"&gt;Limpar&lt;/button&gt;&lt;button type="submit"&gt;Enviar&lt;/button&gt;
+            &lt;/fieldset&gt;
+        &lt;/form&gt;
+
+    &lt;/section&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        function validaFormulario(){
+
+            let lista = document.getElementById("lista").value;
+
+            if(lista === ""){
+                alert("Preencha o campo NÚMEROS");
+                document.getElementById("lista").focus();
+                return false;
+            } else {
+                let vetor = lista.split(",");
+                let soma = 0;
+
+                for(let i = 0; i &lt; vetor.length; i++){
+                    soma += parseInt(vetor[i]);
+                }
+
+                let media = soma / vetor.length;
+
+                alert("Soma: " + soma + "\nMédia: " + media);
+                return false;
+            }
+        }
+
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+            <br><br>
+            <input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+        </form>
+
+        <br><br>
+        <a href="atividades.html">Voltar</a>
+    </main>
+    
+</body>
+</html>

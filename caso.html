@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Guiado - Atividade CASO</title>
+    <link rel="stylesheet" href="css_atividade.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Atividade JavaScript CASO</h1>
+    </header>
+
+    <main class="conteudo">
+        <h2>Dia da Semana</h2>
+        <p>Crie um algoritmo que solicite o número de um dia da semana (1 a 7) em um campo de formulário. Ao clicar em "Enviar", utilizando a estrutura CASO (switch), exiba o nome do dia correspondente. Caso o número não seja válido, exiba a mensagem "Número inválido".</p>
+
+        <form>
+            <br>
+            <textarea name="fonte" cols="80" rows="40">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Estrutura CASO JavaScript - Atividade exemplo&lt;/title&gt;
+    &lt;style&gt;
+        section{
+            margin-top: 0px auto;
+        }
+
+        .cadnumero{
+            width: 300px;
+            margin: 0px auto;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .cadnumero input{
+            margin: 5px auto;
+            width: 100%;
+            padding: 5px 0;
+        }
+
+        .cadnumero button{
+            width: 30%;
+            margin: 0 10%;
+            background-color: #b1ccf5;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        label{
+            float: left;
+        }
+
+        h2{
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Estrutura CASO (switch - Atividade exemplo)&lt;/h2&gt;
+
+        &lt;form name="frmdia" action="#" method="get" onsubmit="return validaFormulario()"&gt;
+            &lt;fieldset class="cadnumero"&gt;
+                &lt;legend&gt;Entrada de dados&lt;/legend&gt;
+                &lt;br&gt;
+                &lt;label for="dia"&gt;Informe o número do dia (1 a 7)&lt;/label&gt;
+                &lt;input type="text" name="txtdia" id="dia"&gt;&lt;br&gt;
+                &lt;br&gt;
+                &lt;button type="reset"&gt;Limpar&lt;/button&gt;&lt;button type="submit"&gt;Enviar&lt;/button&gt;
+            &lt;/fieldset&gt;
+        &lt;/form&gt;
+
+    &lt;/section&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        function validaFormulario(){
+
+            let dia = document.getElementById("dia").value;
+
+            if(dia === ""){
+                alert("Preencha o campo DIA");
+                document.getElementById("dia").focus();
+                return false;
+            } else {
+                dia = parseInt(document.getElementById('dia').value);
+
+                switch(dia){
+                    case 1:
+                        alert("Domingo");
+                        break;
+                    case 2:
+                        alert("Segunda-feira");
+                        break;
+                    case 3:
+                        alert("Terça-feira");
+                        break;
+                    case 4:
+                        alert("Quarta-feira");
+                        break;
+                    case 5:
+                        alert("Quinta-feira");
+                        break;
+                    case 6:
+                        alert("Sexta-feira");
+                        break;
+                    case 7:
+                        alert("Sábado");
+                        break;
+                    default:
+                        alert("Número inválido");
+                }
+                return false;
+            }
+        }
+
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+            <br><br>
+            <input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+        </form>
+
+        <br><br>
+        <a href="atividades.html">Voltar</a>
+    </main>
+    
+</body>
+</html>

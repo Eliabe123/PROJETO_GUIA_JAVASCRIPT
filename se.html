@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Guiado - Atividade SE</title>
+    <link rel="stylesheet" href="css_atividade.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Atividade JavaScript SE</h1>
+    </header>
+
+    <main class="conteudo">
+        <h2>Verificação de Maioridade</h2>
+        <p>Crie um algoritmo que solicite a idade de uma pessoa em um campo de formulário. Ao clicar em "Enviar", se a idade for maior ou igual a 18 anos, exiba a mensagem "Você é maior de idade". Caso contrário, exiba "Você é menor de idade".</p>
+
+        <form>
+            <br>
+            <textarea name="fonte" cols="80" rows="40">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Estrutura SE JavaScript - Atividade exemplo&lt;/title&gt;
+    &lt;style&gt;
+        section{
+            margin-top: 0px auto;
+        }
+
+        .cadidade{
+            width: 300px;
+            margin: 0px auto;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .cadidade input{
+            margin: 5px auto;
+            width: 100%;
+            padding: 5px 0;
+        }
+
+        .cadidade button{
+            width: 30%;
+            margin: 0 10%;
+            background-color: #b1ccf5;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        label{
+            float: left;
+        }
+
+        h2{
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Estrutura SE (if() - Atividade exemplo)&lt;/h2&gt;
+
+        &lt;form name="frmidade" action="#" method="get" onsubmit="return validaFormulario()"&gt;
+            &lt;fieldset class="cadidade"&gt;
+                &lt;legend&gt;Entrada de dados&lt;/legend&gt;
+                &lt;br&gt;
+                &lt;label for="idade"&gt;Informe sua idade&lt;/label&gt;
+                &lt;input type="text" name="txtidade" id="idade"&gt;&lt;br&gt;
+                &lt;br&gt;
+                &lt;button type="reset"&gt;Limpar&lt;/button&gt;&lt;button type="submit"&gt;Enviar&lt;/button&gt;
+            &lt;/fieldset&gt;
+        &lt;/form&gt;
+
+    &lt;/section&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        function validaFormulario(){
+
+            let idade = document.getElementById("idade").value;
+
+            if(idade === ""){
+                alert("Preencha o campo IDADE");
+                document.getElementById("idade").focus();
+                return false;
+            } else {
+                idade = parseInt(document.getElementById('idade').value);
+
+                if(idade >= 18){
+                    alert("Você é maior de idade");
+                } else {
+                    alert("Você é menor de idade");
+                }
+                return false;
+            }
+        }
+
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+            <br><br>
+            <input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+        </form>
+
+        <br><br>
+        <a href="atividades.html">Voltar</a>
+    </main>
+    
+</body>
+</html>

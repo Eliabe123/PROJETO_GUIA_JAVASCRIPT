@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Guiado - Atividade ENQUANTO</title>
+    <link rel="stylesheet" href="css_atividade.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Atividade JavaScript ENQUANTO</h1>
+    </header>
+
+    <main class="conteudo">
+        <h2>Soma dos Números Pares</h2>
+        <p>Crie um algoritmo que solicite um número em um campo de formulário. Ao clicar em "Enviar", utilizando a estrutura ENQUANTO (while), exiba a soma de todos os números pares entre 1 e o número informado.</p>
+
+        <form>
+            <br>
+            <textarea name="fonte" cols="80" rows="40">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Estrutura ENQUANTO JavaScript - Atividade exemplo&lt;/title&gt;
+    &lt;style&gt;
+        section{
+            margin-top: 0px auto;
+        }
+
+        .cadnumero{
+            width: 300px;
+            margin: 0px auto;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .cadnumero input{
+            margin: 5px auto;
+            width: 100%;
+            padding: 5px 0;
+        }
+
+        .cadnumero button{
+            width: 30%;
+            margin: 0 10%;
+            background-color: #b1ccf5;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        label{
+            float: left;
+        }
+
+        h2{
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Estrutura ENQUANTO (while - Atividade exemplo)&lt;/h2&gt;
+
+        &lt;form name="frmnumero" action="#" method="get" onsubmit="return validaFormulario()"&gt;
+            &lt;fieldset class="cadnumero"&gt;
+                &lt;legend&gt;Entrada de dados&lt;/legend&gt;
+                &lt;br&gt;
+                &lt;label for="numero"&gt;Informe um número inteiro&lt;/label&gt;
+                &lt;input type="text" name="txtnumero" id="numero"&gt;&lt;br&gt;
+                &lt;br&gt;
+                &lt;button type="reset"&gt;Limpar&lt;/button&gt;&lt;button type="submit"&gt;Enviar&lt;/button&gt;
+            &lt;/fieldset&gt;
+        &lt;/form&gt;
+
+    &lt;/section&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        function validaFormulario(){
+
+            let numero = document.getElementById("numero").value;
+
+            if(numero === ""){
+                alert("Preencha o campo NÚMERO");
+                document.getElementById("numero").focus();
+                return false;
+            } else {
+                numero = parseInt(document.getElementById('numero').value);
+
+                let soma = 0;
+                let i = 1;
+
+                while(i &lt;= numero){
+                    if(i % 2 === 0){
+                        soma += i;
+                    }
+                    i++;
+                }
+
+                alert("A soma dos números pares entre 1 e " + numero + " é: " + soma);
+                return false;
+            }
+        }
+
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+            <br><br>
+            <input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+        </form>
+
+        <br><br>
+        <a href="atividades.html">Voltar</a>
+    </main>
+    
+</body>
+</html>
